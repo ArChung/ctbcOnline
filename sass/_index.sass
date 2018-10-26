@@ -1,0 +1,511 @@
+
+html,body 
+	width: 100%
+	height: 100%
+.blueTxt
+	color: #093759
+.grayTxt
+	color: #333
+.lightGrayTxt 
+	color: #737d80
+.greenTxt
+	color: #00918a
+.fullImage
+	width: 100%
+
+h1 
+	font-size: 36px
+	+phone 
+		font-size: 40px
+h2
+	font-size: 1em
+	line-height: 1.5em
+	+phone 
+		font-size: 1.6em
+		line-height: 2.15em
+p 
+	margin-bottom: 0.75em
+.list-group
+	.list-group-item
+		background-color: transparent
+ul.dot-list
+	list-style-type: disc
+	padding-left: 2em
+	li 
+		margin-bottom: 1.5em
+.ps-container
+	&:hover
+		.ps-scrollbar-y-rail:hover
+			.ps-scrollbar-y
+				background-color: #009288
+	.ps-scrollbar-y-rail
+		opacity: 1
+		.ps-scrollbar-y 
+			background-color: #009288
+		
+[aria-expanded="false"]:before   
+	content: ""
+	+bg('open.png')
+	position: absolute
+	right: 30px
+	top: 50%
+	+transform(translateY(-50%))
+
+
+[aria-expanded="true"]:before 
+	content: ""
+	+bg('close.png')
+	position: absolute
+	right: 30px
+	top: 50%
+	+transform(translateY(-50%))
+
+.btn.btn-outline-info
+	border-color: #00918a
+	color: #3c7c7c
+	&:hover
+		background-color: #dceeee
+.mainContainer
+	width: 100%
+	overflow-x: hidden
+	.container
+		position: relative
+		max-width: 860px
+		+phone 
+			padding-left: 30px
+			padding-right: 30px
+	.block
+		position: relative
+		left: 50%
+		+transform(translate(-50%))
+.applicationBtn
+	+bg('normal.png')
+	display: block
+	position: relative
+	z-index: 5
+	// +dTime(.3s)
+	&:hover
+		+bg('normal-hover.png')
+	+phone 
+		+bg('btnjoin.png')
+		&:hover
+			+bg('btnjoin-hover.png')
+.navbar
+	width: 100%
+	max-width: 1024px
+	margin: 0 auto
+	display: flex
+	position: relative
+	z-index: 5
+	justify-content: space-between
+	+phone 
+		background-color: #026c6a
+	.navbar-nav
+		.nav-item
+			position: relative
+			+dTime
+			a 
+				font-size: 1.1rem !important
+				color: #7f888f
+				padding: 0 25px
+			&:hover
+				&:after 
+					content: ''
+					position: absolute
+					width: 100%
+					height: 2px
+					background-color: #2a5b5f
+					bottom: -15px
+					left: 0
+				a 
+					color: #2a5b5f
+					font-weight: bold
+			&.active
+				&:after 
+					content: ''
+					position: absolute
+					width: 100%
+					height: 2px
+					background-color: #2a5b5f
+					bottom: -15px
+					left: 0
+				a 
+					color: #2a5b5f
+					font-weight: bold
+
+
+.b_index
+	overflow-y: auto
+	margin-top: -55px
+	+phone 
+		margin-top: 0
+	.container
+		margin-top: 95px
+		+phone
+			padding: 0
+			margin-top: 0
+	.title_1
+		+bg('hl-01.png')
+	.title_2	
+		+bg('hl-02.png')
+	.btns
+		display: flex
+		justify-content: space-between
+		width: 415px
+		.index_btn
+			display: block
+		.btn1
+			+bg('r.png')
+			&:hover 
+				+bg('r-hover.png')
+				+dTime(.3s)
+		.btn2
+			+bg('g.png')
+			&:hover 
+				+bg('g-hover.png')
+				+dTime(.3s)
+		.btn3
+			+bg('g_2.png')
+			&:hover 
+				+bg('g_2-hover.png')
+				+dTime(.3s)
+		+phone	
+			width: 100%
+			margin-top: 20px
+			justify-content: space-around
+			.btn1
+				+bg('btn1.png')
+				&:hover 
+					+bg('btn1-hover.png')
+					+dTime(.3s)
+			.btn2
+				+bg('btn2.png')
+				&:hover 
+					+bg('btn2-hover.png')
+					+dTime(.3s)
+			.btn3
+				+bg('btn3.png')
+				&:hover 
+					+bg('btn3-hover.png')
+					+dTime(.3s)
+.b_steps
+	+phone 
+		padding-top: 70px
+	.container
+		max-width: 830px
+		.steps
+			display: flex
+			justify-content: space-around
+			flex-wrap: wrap
+			+phone
+				.step
+					margin-top: 20px
+		.applicationBtn
+			margin-top: 115px
+			+phone 
+				margin-top: 70px
+
+.b_plan
+	.container
+		position: relative
+		
+		.pics
+			position: absolute
+			left: 440px
+			top: 50px
+			+phone
+				left: 0
+				top: 0
+				position: relative
+				margin-top: 45px
+				left: 50%
+				+transform(translateX(-50%))
+				display: inline-block
+			.pic
+				+bg('interest-rate.png')
+				position: absolute
+				top: 0	
+				left: 0
+				+phone
+					position: relative
+			.clouds
+				position: absolute
+				left: -138px
+				top: -58px
+				> *
+					position: absolute
+					top: 0
+					left: 0
+				.c01
+					+bg('c01.png')
+				.c02
+					+bg('c02.png')
+				.c03
+					+bg('c03.png')
+	ul
+		li
+			margin-bottom: 25px
+			position: relative
+			padding-left: 1em
+			&:before
+				content: ''
+				+bg('point.png')
+				position: absolute
+				left: 0
+				top: 6px
+				+phone 
+					top: 21px
+					
+	.applicationBtn
+		margin-top: 124px
+
+.b_examples
+	.container
+		+phone 
+			padding: 0
+		.pic
+			+bg('board.png')
+			position: relative
+			left: -190px
+	.applicationBtn
+		margin-top: 20px
+		+phone 
+			margin-top: 50px
+.b_rewards
+	h1.blueTxt
+		+pc
+			padding-left: 85px
+	.container
+		padding-top: 20px
+		// padding-left: 85px
+		+phone 
+			padding-left: 30px
+			padding-top: 170px
+			padding-bottom: 50px
+			> h1 
+				text-align: center
+
+	.balloon
+		position: absolute
+		+bg('balloon.png')
+		top: -40px
+		right: 0
+	.txts
+		position: relative
+		+pc
+			left: 85px
+		+pc
+			.txt
+				position: absolute
+				&.t1
+					top: 85px
+					left: 0
+				&.t2 
+					top: 36px
+					left: 236px
+				&.t3
+					top: 0
+					left: 522px
+				h2 
+					font-size: 22px
+				h3 
+					font-size: 15px
+		+phone
+			padding-left: 65px
+			.txt
+				position: relative
+				padding-left: 125px
+				margin-top: 30px
+				&:after
+					content: ''
+					+bg('reward.png')
+					position: absolute
+					top: 50%
+					left: 0
+					+transform(translateY(-50%))
+					
+				h2 
+					font-size: 28px
+				h3 
+					font-size: 24px
+
+	.pics
+		position: absolute
+		top: 188px
+		left: -300px
+		.sun
+			+bg('sun.png')
+			left: 1009px
+			top: 28px
+			position: absolute
+		.pic
+			+bg('mountain.png')
+			position: absolute
+	.applicationBtn
+		margin-top: 330px
+		+phone 
+			margin-top: 50px
+
+.b_offer
+	position: relative
+	z-index: 5
+	.lists
+		display: flex
+		justify-content: space-between
+		flex-wrap: wrap
+		ul 
+			width: 48%
+			font-size: 18px
+			+phone 
+				width: 100%
+				font-size: 24px
+			li 
+				min-height: 4.5em
+				border-top: 1px solid #eff3f6 !important
+				border-bottom: 1px solid #eff3f6 !important 
+				span
+					display: inline-block
+					vertical-align: text-top
+				.list-h
+					font-weight: bold
+					margin-right: 15px
+					+phone
+						min-width: 180px
+	.smallTxt
+		font-size: 0.6em
+		+phone
+			font-size: 1em
+	#collapseExample li
+		+phone 
+			font-size: 1.5em
+.b_notes
+	+phone 
+		background-color: #dceeee
+	.notes
+		height: 200px
+		position: relative
+		background-color: #f4fafa
+		+phone 
+			height: 510px
+			font-size: 1.5em
+		
+		
+			
+.b_footer
+	+phone 
+		background-color: #dceeee
+		padding-top: 30px
+		padding-bottom: 50px
+	.phoneTxt
+		font-size: 2.1em
+		color: #026c6b
+		a 
+			color: #d70f19
+			text-decoration: underline
+.footer-btns
+	background-color: #4daeb5
+	position: relative
+	z-index: 10
+
+	.container
+		padding: 0
+		display: flex
+		.f-btn
+			width: 25%
+			text-align: center
+			h2 
+				margin-top: -10px
+			+phone
+				&:not(:last-child)
+					border-right: 1px solid #7dd2d7
+	+pc 
+		position: fixed
+		top: 150px
+		right: 0
+		width: 90px
+		.container
+			flex-wrap: wrap
+			.f-btn
+				width: 100%
+				padding: 5px 0
+				&:not(:last-child)
+					border-bottom: 1px solid #7dd2d7
+
+
+.topBtn
+	+bg('gototop_2.png')
+	position: fixed
+	right: -100px
+	bottom: 30px
+	cursor: pointer
+	z-index: 10
+	+dTime(.3s)
+	&.show
+		right: 30px
+	&:hover
+		margin-bottom: 5px		
+
++pc	
+	.block
+		background-position: 50% 50%
+		width: 100%
+		background-repeat: no-repeat
+		&.b_index
+			+bgi('bg_01.jpg')
+			height: 702px
+		&.b_steps
+			+bgi('bg_02.jpg')
+			height: 607px 
+		&.b_plan
+			+bgi('bg_03.jpg')
+			height: 629px
+		&.b_examples
+			+bgi('bg_04.jpg')
+			height: 645px
+		&.b_rewards
+			+bgi('bg_05.jpg')
+			height: 589px
+		&.b_offer
+			+bgi('bg_06.jpg')
+			height: 581px
+		&.b_notes
+			+bgi('bg_07.jpg')
+			height: 664px
+		&.b_footer
+			+bgi('bg_08.jpg')
+			height: 501px
+
+
++phone	
+	.block
+		background-repeat: no-repeat
+		&.b_steps
+			+bgi('bg002.png')
+			background-position: 50% 100%
+			background-size: contain
+			padding-bottom: 160px
+		&.b_plan
+			+bgi('bg003.png')
+			background-position: 50% 100%
+			background-size: contain
+			padding-bottom: 160px
+
+		// &.b_examples
+		// 	+bgi('bg_04.jpg')
+		// 	height: 645px
+		&.b_rewards
+			+bgi('bg005.png')
+			background-position: 50% 0%
+			background-size: 100% 100%
+			
+		&.b_offer
+			+bgi('bg004.png')
+			background-position: 50% 100%
+			background-size: contain
+			padding-bottom: 290px
+		// &.b_notes
+		// 	+bgi('bg_07.jpg')
+		// 	height: 664px
+		// &.b_footer
+		// 	+bgi('bg_08.jpg')
+		// 	height: 501px
