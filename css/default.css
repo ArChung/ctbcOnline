@@ -3430,6 +3430,47 @@ ul.dot-list li {
   }
 }
 
+.b_steps .manWrap {
+  position: absolute;
+  left: 50%;
+  bottom: 118px;
+  margin-left: 330px;
+}
+@media screen and (max-width: 768px) {
+  .b_steps .manWrap {
+    bottom: 86px;
+    margin-left: 220px;
+  }
+}
+.b_steps .manWrap > * {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.b_steps .manWrap .m1 {
+  width: 65px;
+  height: 117px;
+  background-image: url("../images/man.png");
+}
+@media screen and (max-width: 768px) {
+  .b_steps .manWrap .m1 {
+    width: 107px;
+    height: 192px;
+    background-image: url("../images/m_man.png");
+  }
+}
+.b_steps .manWrap .m2 {
+  width: 65px;
+  height: 117px;
+  background-image: url("../images/man2.png");
+}
+@media screen and (max-width: 768px) {
+  .b_steps .manWrap .m2 {
+    width: 107px;
+    height: 192px;
+    background-image: url("../images/m_man2.png");
+  }
+}
 @media screen and (max-width: 768px) {
   .b_steps {
     padding-top: 70px;
@@ -3761,8 +3802,11 @@ ul.dot-list li {
 
 .footer-btns {
   background-color: #4daeb5;
-  position: relative;
+  position: fixed;
   z-index: 10;
+  bottom: 0;
+  left: 0;
+  width: 100%;
 }
 .footer-btns .container {
   padding: 0;
@@ -3784,6 +3828,8 @@ ul.dot-list li {
   .footer-btns {
     position: fixed;
     top: 150px;
+    bottom: auto;
+    left: auto;
     right: 0;
     width: 90px;
   }
@@ -3812,6 +3858,11 @@ ul.dot-list li {
   -o-transition: all, 0.3s;
   -webkit-transition: all, 0.3s;
   transition: all, 0.3s;
+}
+@media screen and (max-width: 768px) {
+  .topBtn {
+    bottom: 130px;
+  }
 }
 .topBtn.show {
   right: 30px;

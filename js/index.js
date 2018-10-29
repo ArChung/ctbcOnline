@@ -1,4 +1,4 @@
-var tl1,tl2,tl3,tl4,tl5,tl6;
+var tl1,tl2,tl3,tl4,tl5,tl6,tlman;
 
 
 $(document).ready(function () {
@@ -15,6 +15,7 @@ function initAniEl() {
     tl4 = new TimelineMax();
     tl5 = new TimelineMax();
     tl6 = new TimelineMax();
+    tlman = new TimelineMax();
 
     tl1.set('.b_steps .aniEl',{autoAlpha:0,scale:.7})
     .set('.b_steps .aniTop',{top:20,autoAlpha:0})
@@ -54,6 +55,10 @@ function initAniEl() {
     .set('.b_notes .aniTop',{top:20,autoAlpha:0})
     .staggerTo('.b_notes .aniEl',.6,{delay:.4,autoAlpha:1,scale:1},.1)
     .to('.b_notes .aniTop',.6,{top:0,autoAlpha:1},'-=0.3')
+    .pause();
+
+    tlman.set('.b_steps .m2',{autoAlpha:0,scale:.7,marginTop:6,marginLeft:8})
+    .to('.b_steps .m2',.6,{delay:.3,scale:1,autoAlpha:1,marginTop:0,marginLeft:0,ease:Back.easeOut})
     .pause();
 
     $('.inViewDiv').one('inview', function (event, isInView) {

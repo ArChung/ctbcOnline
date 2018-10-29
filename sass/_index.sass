@@ -189,6 +189,28 @@ ul.dot-list
 					+bg('btn3-hover.png')
 					+dTime(.3s)
 .b_steps
+	.manWrap
+		position: absolute
+		left: 50%
+		bottom: 118px
+		margin-left: 330px
+		+phone 
+			bottom: 86px 
+			margin-left: 220px
+
+		> *
+			position: absolute
+			top: 0
+			left: 0
+		.m1
+			+bg('man.png')
+			+phone 
+				+bg('m_man.png')
+
+		.m2
+			+bg('man2.png')
+			+phone 
+				+bg('m_man2.png')
 	+phone 
 		padding-top: 70px
 	.container
@@ -404,9 +426,11 @@ ul.dot-list
 			text-decoration: underline
 .footer-btns
 	background-color: #4daeb5
-	position: relative
+	position: fixed
 	z-index: 10
-
+	bottom: 0
+	left: 0
+	width: 100%
 	.container
 		padding: 0
 		display: flex
@@ -421,6 +445,8 @@ ul.dot-list
 	+pc 
 		position: fixed
 		top: 150px
+		bottom: auto
+		left: auto
 		right: 0
 		width: 90px
 		.container
@@ -440,6 +466,8 @@ ul.dot-list
 	cursor: pointer
 	z-index: 10
 	+dTime(.3s)
+	+phone 
+		bottom: 130px
 	&.show
 		right: 30px
 	&:hover
