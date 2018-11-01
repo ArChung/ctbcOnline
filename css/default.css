@@ -3326,9 +3326,15 @@ ul.dot-list li {
   background-image: url("../images/hl-01.png");
 }
 .b_index .title_2 {
+  background-image: url("../images/hl-02.png");
   width: 307px;
   height: 52px;
-  background-image: url("../images/hl-02.png");
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  -webkit-background-size: contain;
+  background-size: contain;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
 }
 .b_index .btns {
   display: flex;
@@ -3878,7 +3884,7 @@ ul.dot-list li {
     background-repeat: no-repeat;
   }
   .block.b_index {
-    background-image: url("../images/bg_01.jpg");
+    background-image: url("../images/bg1.png");
     height: 702px;
   }
   .block.b_steps {
