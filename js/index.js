@@ -5,6 +5,8 @@ $(document).ready(function () {
     initNoteScrollBar();
     initTopBtn();
     initAniEl();
+    initJumpBtn();
+    initATag();
     
 })
 
@@ -89,6 +91,21 @@ function initTopBtn() {
     });
 }
 
+function initJumpBtn() {
+    $('.jumpBtn').on('click',function(e){
+        e.preventDefault();
+        ChungTool.pageScrollAni($("#" +$(this).attr('data-goto')).offset().top);
+    });
+}
+
 function initNoteScrollBar() {
     $("#note").perfectScrollbar()
+}
+
+function initATag() {
+    $('a.linkCheck').each(function(){
+        if(ChungTool.isPhone()){
+            $(this).attr('href',$(this).attr('data-mLink'));
+        }
+    })
 }
